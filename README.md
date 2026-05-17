@@ -51,6 +51,21 @@ The firmware evaluates thermal data arrays every **1000 ms** to execute real-tim
 
 ---
 
+### 🛠️ Installation & Deployment
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/](https://github.com/)[your_username]/Smart-Thermoregulation-Heatpad.git
+2. **Library Requirements:**
+   Install the following dependencies via your development platform manager:
+   * Wire.h (built-in)
+   * MAX30105.h (SparkFun Electronics)
+   * Adafruit_MLX90614.h (Adafruit Industries)
+4. **Compile and Flash:**
+   Target the DOIT ESP32 DEVKIT V1 board architecture and flash the primary entry file located at src/smart_heatpad/smart_heatpad.ino.
+
+---
+
 ### 💻 Core Firmware Implementation
 
 ```cpp
@@ -69,3 +84,5 @@ if (millis() - lastDisplayTime >= DISPLAY_INTERVAL) {
       digitalWrite(HEATER_PIN, HIGH); // Normal Heating State
     }
 }
+
+
